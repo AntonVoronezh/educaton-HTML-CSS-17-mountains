@@ -11,6 +11,7 @@ const reload = browserSync.reload;
 const $webpack = require("webpack-stream");
 const webpack = require("webpack");
 const del = require("del");
+const ghPages = require('gulp-gh-pages');
 
 // стили
 gulp.task("styles", () => {
@@ -60,7 +61,7 @@ gulp.task("pug", () => {
   return gulp
     .src(`${config.VIEWS_DIR}/pages/*.pug`)
     .pipe($gp.plumber())
-    .pipe($gp.pug())
+    .pipe($gp.pug({pretty:true}))
     .pipe(gulp.dest(`${config.DIST_DIR}`))
     .pipe(reload({ stream: true }));
 });
@@ -152,3 +153,6 @@ gulp.task(
     gulp.parallel("styles", "pug", "images", "fonts", "scripts")
   )
 );
+
+
+gulp.task('deploy', () => gulp.src(`${config.DIST_DIR}/**/*`).pipe(ghPages()));
