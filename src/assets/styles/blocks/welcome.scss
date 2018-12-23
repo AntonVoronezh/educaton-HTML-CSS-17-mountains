@@ -17,17 +17,17 @@
     align-items: center;
     &__top {
         align-self: flex-end;
-        margin-right: rem(100px);
-        margin-top: rem(25px);
+        margin-right: 100px;
+        margin-top: 25px;
         // border: 1px solid #000000;
     }
     &__center {
-        min-height: rem(400px);
-        width: rem(380px);
+        min-height: 400px;
+        width: 380px;
         border: 1px solid #000000;
     }
     &__bottom {
-        margin-bottom: rem(50px);
-        border: 1px solid #000000;
+        margin-bottom: 50px;
+        // border: 1px solid #000000;
     }
 }
