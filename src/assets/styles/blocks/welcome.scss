@@ -1,4 +1,22 @@
 .welcome-wrap {
     height: 100vh;
-    background: url('assets/images/welcome/mountains_for_parallax.jpg') center center no-repeat;
+    background: url('assets/images/welcome/mountains_for_parallax.jpg');
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    &__top {
+        border: 1px solid #000000;
+    }
+    &__center {
+        border: 1px solid #000000;
+    }
+    &__bottom {
+        border: 1px solid #000000;
+    }
 }
