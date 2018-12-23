@@ -1,5 +1,6 @@
 extends ../auth.layout.pug
 
+- signature = `© Владимир Астахов | создано с любовью в LoftSchool | 2018`
 block content
   //- .hello-world
     //- +icon('portfolio_header', 'hello-world__block')
@@ -9,4 +10,4 @@ block content
       .welcome__top 
         button.btn.btn--welcome Авторизоваться
       .welcome__center lll
-      .welcome__bottom kkkh
+      .welcome__bottom #{signature}
