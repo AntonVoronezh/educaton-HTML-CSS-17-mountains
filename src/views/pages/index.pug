@@ -1,21 +1,25 @@
 extends ../auth.layout.pug
 
-
 block content
   //- .hello-world
-    //- +icon('portfolio_header', 'hello-world__block')
-    //- .inlined-svg
+  //-   +icon('portfolio_header', 'hello-world__block')
+  //-   .inlined-svg
   .welcome-wrap
     .welcome
       .welcome__top 
         button.btn.btn--welcome Авторизоваться
       .welcome__center 
         .welcome__center-wrap
-          .card
+          .card.card--welcome
             +image('photo/photo.png', 'фото разработчика', 'card__img')
             .card__name Владимир Астахов
             .card__desc Личный сайт веб разработчика
-          .socials
+          .socials.socials--welcome
+            - var socials = ['vk','github','in']
+              each social in socials
+                a(href="#").socials__link
+                  +icon(social, 'socials__img  svg', 'ссылка на '+ social)
+                  span.visually-hidden ссылка на social
           .links
       .welcome__bottom 
-        signature.signature.signature--welcome  © Владимир Астахов | создано с любовью в LoftSchool | 2018
+        signature.signature.signature--welcome  © Владимир Астахов | создано с любовью в LoftSchool | 2018 

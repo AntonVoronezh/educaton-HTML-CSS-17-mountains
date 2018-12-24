@@ -1,0 +1,23 @@
+.svg {
+    width: 100%;
+    height: 100%;
+}
+
+.socials {
+    display: flex;
+    justify-content: center; // border: 1px solid #000200;
+    &__img {
+        fill: $green;
+        opacity: 0.5; // border: 1px solid #000200;
+        height: 20px;
+        width: 40px;
+        margin-right: 20px;
+        transition: opacity 0.5s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &--welcome {
+        margin-top: 30px;
+    }
+}
