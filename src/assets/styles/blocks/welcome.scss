@@ -18,16 +18,18 @@
     &__top {
         align-self: flex-end;
         margin-right: 100px;
-        margin-top: 25px;
-        // border: 1px solid #000000;
+        margin-top: 25px; // border: 1px solid #000000;
     }
     &__center {
-        min-height: 400px;
-        width: 380px;
-        border: 1px solid #000000;
+        // border: 1px solid #000000;
+        &-wrap {
+            min-height: 400px;
+            width: 380px;
+            background-color: #fcfcfc;
+            opacity: 0.85;
+        }
     }
     &__bottom {
-        margin-bottom: 50px;
-        // border: 1px solid #000000;
+        margin-bottom: 50px; // border: 1px solid #000000;
     }
 }
