@@ -1,0 +1,22 @@
+header.header.header-wrap
+  .header__top 
+    .header__top-left 
+     .socials.socials--header
+            - var socials = ['vk','github','in']
+              each social in socials
+                a(href="#").socials__link
+                  +icon(social, 'socials__img socials__img--header svg', 'ссылка на '+ social)
+                  span.visually-hidden ссылка на #{social}
+    .header__top-right
+        +icon('hamburger', 'hamburger  svg', 'меню')
+        span.visually-hidden меню
+  .header__middle 
+    .header__middle-wrap
+    .card.card--header
+            +image('photo/photo.png', 'фото разработчика', 'card__img')
+            .card__name Владимир Астахов
+            .card__desc Личный сайт веб разработчика
+  .header__bottom 
+    a(href="#").socials__link
+        +icon('arrow_down', 'header__img  svg', 'вниз')
+        span.visually-hidden дальше

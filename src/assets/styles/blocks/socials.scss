@@ -5,19 +5,22 @@
 
 .socials {
     display: flex;
-    justify-content: center; // border: 1px solid #000200;
+    justify-content: center; //  border: 1px solid #000200;
     &__img {
-        fill: $green;
-        opacity: 0.5; // border: 1px solid #000200;
+        // border: 1px solid #000200;
         height: 20px;
         width: 40px;
         margin-right: 20px;
         transition: opacity 0.5s;
-        &:hover {
-            opacity: 1;
+        &--welcome {
+            fill: $green;
         }
-    }
-    &--welcome {
-        margin-top: 30px;
+        &--header {
+            fill: #ffffff;
+            opacity: 1;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
     }
 }

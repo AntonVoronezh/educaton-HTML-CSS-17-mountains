@@ -1,0 +1,40 @@
+.title {
+    font-family: 'bernier';
+    display: flex;
+    align-items: center;
+    &::before {
+        content: "";
+        display: block;
+        width: 22px;
+        height: 5px;
+        background-color: #373e42;
+        margin-right: 15px;
+        opacity: 0.2;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 22px;
+        height: 5px;
+        background-color: #373e42;
+        margin-left: 15px;
+        opacity: 0.2;
+    }
+    &--about {
+        margin-top: -100px;
+    }
+}
+
+.main-title {
+    font-size: 63px;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 1.57px;
+}
+
+.second-title {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 41px;
+    margin-bottom: 20px;
+}
