@@ -1,0 +1,26 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='works.bundle.js')
+
+block content
+  main.main
+    .container
+      .main__top.works
+        .works__left 
+          .works__triangles
+            svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+              polygon(points="0,0 0,150 900,150")
+        .works__right 
+          .works__triangles
+            svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+              polygon(points="0,150 900,150 900,0")
+          
+        .
+
+      .main__bottom.comments
+
+            
