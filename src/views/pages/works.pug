@@ -19,7 +19,6 @@ block content
             .works__triangles
               svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
                   polygon(points="0,150 900,150 900,0")
-          
         .works__header 
           .works__back
             h1.title.main-title.title--works Мои работы
@@ -35,7 +34,6 @@ block content
                     button.btn-works-item 
                       +icon('link', 'works__button-icon svg', 'ссылка на ' + key)
                       |Посмотреть сайт
-
           .works__right 
             .works__right-wrap
               .works__right-top
@@ -43,7 +41,6 @@ block content
               .works__right-bottom
                 .works__right-block
                   a(href="#" title="предыдущая работа").works__right-link
-                    
                     +image('works/work-2.png', 'фото', 'works__img')
                     .works__right-phone 
                       +icon('portf_arrow_down', 'works__img-svg  svg', 'следующая работа')
@@ -54,10 +51,11 @@ block content
                     .works__right-phone 
                       +icon('portf_arrow_up', 'works__img-svg  svg', 'следующая работа')
                       span.visually-hidden дальше
-
         .works__header.works__header--bottom
           .works__back.works__back--bottom
-            h1.title.main-title.title--works Мои работы
+            h1.title.main-title.title--works Что обо мне говорят
       .main__bottom.comments
+        .comments__top
+        .comments__bottom
 
             
