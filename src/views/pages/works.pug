@@ -70,8 +70,16 @@ block content
                 .comments__photo
                   +image('works/review-photo-2.jpg', 'Сабанцев Владимир', 'comments__img')
                 .comments__sign  
-                  span.bold Сабанцев Владимирй 
+                  span.bold Сабанцев Владимир 
                   span.normal преподаватель Loftschool
         .comments__bottom
+          h2.title.second-title Связаться со мной
+          .comments__form.form
+            input(type="text", name="name" placeholder="Имя").form__input
+            input(type="email", name="email" placeholder="Email").form__input
+            textarea(name="text" placeholder="Ваше сообщение").form__textarea
+            .form__wrap
+              input(type="submit", value="Отправить").btn-works-item.form__submit
+              input(type="reset", value="Очистить").btn-works-item.form__reset
 
 
