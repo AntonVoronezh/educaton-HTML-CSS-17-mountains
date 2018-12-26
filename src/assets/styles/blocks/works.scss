@@ -5,11 +5,11 @@
     flex-direction: column;
     position: relative;
     &__top {
-        border: 1px solid #000000;
+        // border: 1px solid #000000;
     }
     &__bottom {
         position: relative;
-        border: 1px solid #000000;
+        // border: 1px solid #000000;
     }
 }
 
@@ -278,6 +278,9 @@
         justify-content: flex-start;
         align-items: center;
         border-radius: 5px;
+    }
+    &__bottom-link {
+        margin-top: 70px;
     }
 }
 
