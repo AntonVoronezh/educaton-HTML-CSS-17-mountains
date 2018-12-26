@@ -1,2 +1,24 @@
-footer.footer
-  h2 Copyright &copy;
+footer.footer.footer--about
+  .container
+    .footer__wrap
+      .footer__top 
+        .footer__top-left
+          nav.nav.nav-footer
+            - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html','Авторизация':'login.html'} 
+              ul.nav-footer__list
+                each value,key in obj
+                  li.nav-footer__item
+                    a(href=`${value}` title=`${key}`).nav-footer__link #{key}
+        .footer__top-right
+          .socials.socials--footer
+            - var socials = {'vk':'http://vk.com','github':'http://github.com','in':'http://linkedin.com'}
+              each value,key in socials
+                .socials__footer-wrap
+                  a(href=`${value}` target="_blank").socials__link.socials__link--footer
+                    +icon(key, 'socials__img socials__img--footer svg', 'ссылка на '+ key)
+                    span.visually-hidden ссылка на #{key}
+      .footer__bottom 
+        .footer__bottom-left
+          p.text.text--footer Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+        .footer__bottom-right
+          signature.signature.signature--footer  © Владимир Астахов | создано с любовью в LoftSchool | 2018 

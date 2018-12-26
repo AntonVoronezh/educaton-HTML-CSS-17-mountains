@@ -2,28 +2,29 @@ extends ../auth.layout.pug
 
 block content
   //-   .inlined-svg
-  .welcome-wrap
-    .welcome
-      .welcome__top 
-        button.btn.btn--welcome Авторизоваться
-      .welcome__center 
-        h1.visually-hidden Личный сайт разработчика
-        .welcome__center-wrap
-          .card.card--welcome
-            +image('photo/photo.png', 'фото разработчика', 'card__img')
-            .card__name Владимир Астахов
-            .card__desc Личный сайт веб разработчика
-          .socials.socials--welcome
-            - var socials = ['vk','github','in']
-              each social in socials
-                a(href="#").socials__link
-                  +icon(social, 'socials__img socials__img--welcome svg', 'ссылка на '+ social)
-                  span.visually-hidden ссылка на #{social}
-          nav.nav.nav-welcome
-            - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html'} 
-            ul.nav-welcome__list
-              each value,key in obj
-                li.nav-welcome__item
-                  a(href=`${value}` title=`${key}`).nav-welcome__link #{key}
-      .welcome__bottom
-        signature.signature.signature--welcome  © Владимир Астахов | создано с любовью в LoftSchool | 2018 
+  .welcome-wrap 
+    .container
+      .welcome
+        .welcome__top 
+          button.btn.btn--welcome Авторизоваться
+        .welcome__center 
+          h1.visually-hidden Личный сайт разработчика
+          .welcome__center-wrap
+            .card.card--welcome
+              +image('photo/photo.png', 'фото разработчика', 'card__img')
+              .card__name Владимир Астахов
+              .card__desc Личный сайт веб разработчика
+            .socials.socials--welcome
+              - var socials = {'vk':'http://vk.com','github':'http://github.com','in':'http://linkedin.com'}
+                each value,key in socials
+                  a(href=`${value}` target="_blank").socials__link
+                    +icon(key, 'socials__img socials__img--welcome svg', 'ссылка на '+ key)
+                    span.visually-hidden ссылка на #{key}
+            nav.nav.nav-welcome
+              - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html'} 
+              ul.nav-welcome__list
+                each value,key in obj
+                  li.nav-welcome__item
+                    a(href=`${value}` title=`${key}`).nav-welcome__link #{key}
+        .welcome__bottom
+          signature.signature.signature--welcome  © Владимир Астахов | создано с любовью в LoftSchool | 2018 

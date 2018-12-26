@@ -1,0 +1,28 @@
+.skills {
+    // border: 1px solid #000000;
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.skill {
+    position: relative;
+    // border: 1px solid #000000;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #00bfa5;
+        font-size: 14px;
+        font-weight: 500;
+        // line-height: 32px;
+        text-transform: uppercase;
+    }
+}

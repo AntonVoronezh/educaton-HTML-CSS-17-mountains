@@ -5,9 +5,8 @@
 
 .socials {
     display: flex;
-    justify-content: center; //  border: 1px solid #000200;
+    justify-content: center; 
     &__img {
-        // border: 1px solid #000200;
         height: 20px;
         width: 40px;
         margin-right: 20px;
@@ -21,6 +20,35 @@
             &:hover {
                 opacity: 0.5;
             }
+        }
+        &--footer {
+            margin-right: 0;
+            fill: #ffffff;
+            opacity: 0.5;
+            &:hover {
+                fill: #373e42;
+                opacity: 0.85;
+            }
+        }
+    }
+    &__link--footer {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__footer-wrap {
+        height: 40px;
+        width: 40px;
+        margin-right: 20px;
+        border: 1px solid #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        &:hover {
+            background-color: #fff;
         }
     }
 }
