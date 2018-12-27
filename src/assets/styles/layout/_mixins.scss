@@ -3,6 +3,24 @@
 // }
 // size
 $default:1800px;
-$desctop:1200px;
+$desktop:1200px;
 $tablets:768px;
 $phones:480px;
+
+@mixin desktop {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media (max-width: $phones) {
+        @content;
+    }
+}
