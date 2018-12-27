@@ -31,27 +31,32 @@ block content
           .about__wrap.about__wrap--right  
             h2.title.second-title Чем я могу быть вам полезен
             p.text.about__content Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-            h3.third-title Frontend
             section.skills
-              - var skills = ['HTML5', 'CSS3', 'JavaScript & jQuery']
+              h3.third-title Frontend
+              .skills-wrap
+                - var skills = ['HTML5', 'CSS3', 'JavaScript & jQuery']
                  each skill in skills
                   .skill 
                     svg(width='120' height='120')
                       circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
                       circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
                     .skill__text #{skill}
-            h3.third-title Backend
+            
             section.skills
-              - var skills = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+              h3.third-title Backend
+              .skills-wrap
+                - var skills = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
                  each skill in skills
                   .skill 
                     svg(width='120' height='120')
                       circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
                       circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
                     .skill__text #{skill}
-            h3.third-title WorkFlow
+            
             section.skills
-              - var skills = ['Git', 'Gulp', 'Bower']
+              h3.third-title WorkFlow
+              .skills-wrap
+                - var skills = ['Git', 'Gulp', 'Bower']
                  each skill in skills
                   .skill 
                     svg(width='120' height='120')

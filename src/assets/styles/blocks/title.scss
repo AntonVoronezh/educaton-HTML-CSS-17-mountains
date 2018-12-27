@@ -57,4 +57,9 @@
     line-height: 32px;
     margin-bottom: 10px;
     align-self: flex-start;
+    &--skills {
+        // flex:1;
+        width: 100%;
+        border: 1px solid #000000;
+    }
 }
