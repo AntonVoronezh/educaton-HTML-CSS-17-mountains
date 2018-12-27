@@ -1,0 +1,78 @@
+//- header.header.header-wrap
+//-   .container
+//-     .header__top 
+//-       .header__top-left 
+//-         .socials.socials--header
+//-           - var socials = {'vk':'http://vk.com','github':'http://github.com','in':'http://linkedin.com'}
+//-             each value,key in socials
+//-               a(href=`${value}` target="_blank").socials__link
+//-                 +icon(key, 'socials__img socials__img--header svg', 'ссылка на '+ key)
+//-                 span.visually-hidden ссылка на #{key}
+//-       .header__top-right
+//-         button.btn-hamburger
+//-           +icon('hamburger', 'hamburger  svg', 'меню')
+//-           span.visually-hidden меню
+//-     .header__middle 
+//-       .header__middle-wrap
+//-       .card.card--header
+//-               +image('photo/photo.png', 'фото разработчика', 'card__img')
+//-               .card__name Владимир Астахов
+//-               .card__desc Личный сайт веб разработчика
+//-     .header__bottom 
+//-       a(href="#").header__bottom-link
+//-         +icon('arrow_down', 'header__img  svg', 'вниз')
+//-         span.visually-hidden дальше
+
+if title !== 'Мой блог'
+  header.header.header-wrap
+    .container
+      .header__top 
+        .header__top-left 
+          .socials.socials--header
+            - var socials = {'vk':'http://vk.com','github':'http://github.com','in':'http://linkedin.com'}
+              each value,key in socials
+                a(href=`${value}` target="_blank").socials__link
+                  +icon(key, 'socials__img socials__img--header svg', 'ссылка на '+ key)
+                  span.visually-hidden ссылка на #{key}
+        .header__top-right
+          button.btn-hamburger
+            +icon('hamburger', 'hamburger  svg', 'меню')
+            span.visually-hidden меню
+      .header__middle 
+        .header__middle-wrap
+        .card.card--header
+                +image('photo/photo.png', 'фото разработчика', 'card__img')
+                .card__name Владимир Астахов
+                .card__desc Личный сайт веб разработчика
+      .header__bottom 
+        a(href="#").header__bottom-link
+          +icon('arrow_down', 'header__img  svg', 'вниз')
+          span.visually-hidden дальше
+
+else if title === 'Мой блог'
+   header.header.header-wrap
+    .container
+      .header__top 
+        .header__top-left 
+          .socials.socials--header
+            - var socials = {'vk':'http://vk.com','github':'http://github.com','in':'http://linkedin.com'}
+              each value,key in socials
+                a(href=`${value}` target="_blank").socials__link
+                  +icon(key, 'socials__img socials__img--header svg', 'ссылка на '+ key)
+                  span.visually-hidden ссылка на #{key}
+        .header__top-right
+          button.btn-hamburger
+            +icon('hamburger', 'hamburger  svg', 'меню')
+            span.visually-hidden меню
+      .header__middle 
+        .header__middle-wrap-blog
+        .card.card--header
+                +image('photo/photo.png', 'фото разработчика', 'card__img')
+                .header__blog-back
+                  h1.title.main-title.title--works Блог
+                //- .card__name Владимир Астахов
+                .card__desc Статьи, которые я написал
+      .header__bottom 
+        a(href="#").header__bottom-link
+          +icon('arrow_down', 'header__img  svg', 'вниз')
+          span.visually-hidden дальше
