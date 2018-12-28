@@ -15,7 +15,12 @@
 .works {
     display: flex;
     flex-direction: column;
+    &__left {
+        width: 50%;
+    }
     &__right {
+        // border: 1px solid #000000;
+        width: 50%;
         &-block {
             width: 50%; // border: 1px solid #000000;
             position: relative; // 
@@ -96,11 +101,13 @@
     &__triangles-wrap {
         width: 100%;
         display: flex;
+        // border: 1px solid #000000;
     }
     &__triangles {
         width: 100%;
         margin-top: -150px;
         position: relative;
+        // border: 1px solid #000000;
     }
     &__wrap {
         min-height: 650px;
@@ -285,7 +292,9 @@
     }
     &__bottom {
         // border: 1px solid #000000;
-        width: 380px;
+        max-width: 380px;
+        width: 95%;
+        height: 100%;
         padding-top: 20px; // height: 437px;
         background-color: rgba(255, 255, 255, 0.4);
         display: flex;
@@ -296,6 +305,9 @@
     }
     &__bottom-link {
         margin-top: 70px;
+    }
+    &__form {
+// border: 1px solid #000000;
     }
 }
 
