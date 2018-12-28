@@ -6,31 +6,30 @@
     margin-bottom: 50px;
     &-wrap {
         display: flex;
-        @include tablets { 
-            width: 100%;
-            // border: 1px solid #000000;
+        @include tablets {
+            width: 100%; // border: 1px solid #000000;
+        }
+        @include phones {
+            flex-wrap: wrap;
         }
     }
-    @include tablets { 
-        
+    @include tablets {
         justify-content: center;
         align-items: center;
     }
 }
 
 .skill {
-    position: relative;
-    // border: 1px solid #000000;
+    position: relative; // border: 1px solid #000000;
     width: 120px;
     height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 50px;
-    @include tablets { 
+    @include tablets {
         margin-right: 0;
-        flex:1;
-
+        flex: 1;
     }
     &__text {
         position: absolute;
@@ -39,8 +38,7 @@
         transform: translate(-50%, -50%);
         color: #00bfa5;
         font-size: 14px;
-        font-weight: 500;
-        // line-height: 32px;
+        font-weight: 500; // line-height: 32px;
         text-transform: uppercase;
     }
 }
