@@ -20,15 +20,12 @@
         justify-content: space-between;
     }
     &__top {
-        // width: 100%;
-        // border: 1px solid #000000;
-        @include desktop {
-            align-self: flex-end;
-        }
+        align-self: flex-end;
         margin-right: 100px;
         @include phones {
             align-self: center;
             margin-right: 0;
+            margin-bottom: 15px;
         }
         margin-top: 25px; // border: 1px solid #000000;
     }
@@ -39,6 +36,7 @@
             width: 380px;
             @include phones {
                 width: 90vw;
+                margin-bottom: 15px;
             }
             background-color: #fcfcfc;
             opacity: 0.85;
