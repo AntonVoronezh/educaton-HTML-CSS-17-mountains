@@ -9,11 +9,18 @@
     &__aside {
         // border: 1px solid #000000;
         max-width: 250px;
+        @include tablets {
+            display: none;
+        }
     }
     &__main {
         // border: 1px solid #000000;
         max-width: 980px;
         margin-left: 50px;
+        @include tablets {
+            margin-left: 0;
+            padding: 10px;
+        }
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
