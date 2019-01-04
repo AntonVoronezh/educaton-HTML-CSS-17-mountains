@@ -46,6 +46,11 @@
             border-bottom-right-radius: 5px;
         }
     }
+    &--back {
+        // align-self: flex-end;
+        // justify-self: flex-end
+        width: 100%;
+    }
 }
 
 .nav-footer {

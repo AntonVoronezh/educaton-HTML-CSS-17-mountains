@@ -10,33 +10,36 @@ block content
             button.btn.btn--welcome Авторизоваться
           .welcome__center 
             h1.visually-hidden Личный сайт разработчика
-            .welcome__center-wrap
-              .card.card--welcome
-                //- +image('photo/photo.png', 'фото разработчика', 'card__img')
-                picture
-                  source(media='(min-width:1200px)', srcset='./assets/images/photo/photo-default@1.png 1x,\
-                  ./assets/images/photo/photo-default@2.png 2x, ./assets/images/photo/photo-default@3.png 3x')
-                  source(media='(min-width:768px)', srcset='./assets/images/photo/photo-desktop@1.png 1x,\
-                  ./assets/images/photo/photo-desktop@2.png 2x, ./assets/images/photo/photo-desktop@3.png 3x')
-                  source(media='(min-width:480px)', srcset='./assets/images/photo/photo-tablets@1.png 1x,\
-                  ./assets/images/photo/photo-tablets@2.png 2x, ./assets/images/photo/photo-tablets@3.png 3x')
-                  img.card__img(alt='фото разработчика', src='./assets/images/photo/photo-phones@1.png', srcset='./assets/images/photo/photo-phones@1.png 1x, \
-                  ./assets/images/photo/photo-phones@2.png 2x, \
-                  ./assets/images/photo/photo-phones@3.png 3x')
-                .card__name Владимир Астахов
-                .card__desc Личный сайт веб разработчика
-              .socials.socials--welcome
-                - var socials = {'vk':'http://vk.com','github':'http://github.com','in':'http://linkedin.com'}
-                  each value,key in socials
-                    a(href=`${value}` target="_blank").socials__link
-                      +icon(key, 'socials__img socials__img--welcome svg', 'ссылка на '+ key)
-                      span.visually-hidden ссылка на #{key}
-              nav.nav.nav-welcome
-                - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html'} 
-                ul.nav-welcome__list
-                  each value,key in obj
-                    li.nav-welcome__item
-                      a(href=`${value}` title=`${key}`).nav-welcome__link #{key}
+            //- include ../common/cardFront.pug
+            include ../common/cardBack.pug
+            //- h1.visually-hidden Личный сайт разработчика
+            //- .welcome__center-wrap
+            //-   .card.card--welcome
+            //-     //- +image('photo/photo.png', 'фото разработчика', 'card__img')
+            //-     picture
+            //-       source(media='(min-width:1200px)', srcset='./assets/images/photo/photo-default@1.png 1x,\
+            //-       ./assets/images/photo/photo-default@2.png 2x, ./assets/images/photo/photo-default@3.png 3x')
+            //-       source(media='(min-width:768px)', srcset='./assets/images/photo/photo-desktop@1.png 1x,\
+            //-       ./assets/images/photo/photo-desktop@2.png 2x, ./assets/images/photo/photo-desktop@3.png 3x')
+            //-       source(media='(min-width:480px)', srcset='./assets/images/photo/photo-tablets@1.png 1x,\
+            //-       ./assets/images/photo/photo-tablets@2.png 2x, ./assets/images/photo/photo-tablets@3.png 3x')
+            //-       img.card__img(alt='фото разработчика', src='./assets/images/photo/photo-phones@1.png', srcset='./assets/images/photo/photo-phones@1.png 1x, \
+            //-       ./assets/images/photo/photo-phones@2.png 2x, \
+            //-       ./assets/images/photo/photo-phones@3.png 3x')
+            //-     .card__name Владимир Астахов
+            //-     .card__desc Личный сайт веб разработчика
+            //-   .socials.socials--welcome
+            //-     - var socials = {'vk':'http://vk.com','github':'http://github.com','in':'http://linkedin.com'}
+            //-       each value,key in socials
+            //-         a(href=`${value}` target="_blank").socials__link
+            //-           +icon(key, 'socials__img socials__img--welcome svg', 'ссылка на '+ key)
+            //-           span.visually-hidden ссылка на #{key}
+            //-   nav.nav.nav-welcome
+            //-     - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html'} 
+            //-     ul.nav-welcome__list
+            //-       each value,key in obj
+            //-         li.nav-welcome__item
+            //-           a(href=`${value}` title=`${key}`).nav-welcome__link #{key}
           .welcome__bottom
             signature.signature.signature--welcome 
               span © Владимир Астахов |  
