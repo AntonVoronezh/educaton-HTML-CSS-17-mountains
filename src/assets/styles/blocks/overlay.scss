@@ -1,0 +1,60 @@
+.overlay {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: $green; // opacity: 1;
+    // transition: opacity 1.1s; 
+    transition: left 1.1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__list {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        @include phones {
+            height: 70%;
+        }
+    }
+    &__item {}
+    &__link {
+        font-family: 'bernier';
+        font-size: 63px;
+        font-weight: 400;
+        line-height: 66px;
+        letter-spacing: 1.57px;
+        text-decoration: none;
+        color: #fff;
+        @include phones {
+            font-size: 43px;
+            font-weight: 400;
+            line-height: 46px;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+        &:focus {
+            text-decoration: underline;
+        }
+        &:active {
+            color: darken(#fff, 50%);
+        }
+    }
+}
+
+.overlay-plus {
+    // transition: left 1.1s; 
+    left: 5000px; // opacity: 0;
+}
+
+.body {
+    overflow-y: hidden;
+}

@@ -18,7 +18,7 @@ if title !== 'Мой блог'
             span
             span
             span
-
+            span.visually-hidden меню
       .header__middle 
         .header__middle-wrap
         .card.card--header
@@ -52,8 +52,14 @@ else if title === 'Мой блог'
                   +icon(key, 'socials__img socials__img--header svg', 'ссылка на '+ key)
                   span.visually-hidden ссылка на #{key}
         .header__top-right
-          button.btn-hamburger
-            +icon('hamburger', 'hamburger  svg', 'меню')
+          //- button.btn-hamburger
+          //-   +icon('hamburger', 'hamburger  svg', 'меню')
+          //-   span.visually-hidden меню
+          #nav-icon3
+            span
+            span
+            span
+            span
             span.visually-hidden меню
       .header__middle 
         .header__middle-wrap-blog
@@ -76,3 +82,10 @@ else if title === 'Мой блог'
         a(href="#").header__bottom-link
           +icon('arrow_down', 'header__img  svg', 'вниз')
           span.visually-hidden дальше
+
+.overlay.overlay-plus 
+  - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html','Авторизация':'index.html'} 
+    ul.overlay__list
+      each value,key in obj
+        li.overlay__item
+          a(href=`${value}` title=`${key}`).overlay__link #{key}
