@@ -2,8 +2,7 @@ export default function flipCard() {
 
     const button = document.querySelector(".btn--welcome");
     const flipper = document.querySelector(".flipper");
-    const getLinks = document.querySelectorAll(".nav-welcome__link");
-    const mainPage = getLinks[3];
+    const mainPage = document.querySelector(".btn-card--back");
 
     const makeFlip = () => {
 

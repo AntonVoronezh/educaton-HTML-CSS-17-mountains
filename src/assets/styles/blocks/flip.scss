@@ -11,8 +11,14 @@
 	}
 
 .flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
+	// width: 320px;
+	// height: 480px;
+	width: 380px;
+	height: 400px;
+	@include phones {
+		width: 90vw;
+		margin-bottom: 15px;
+	}
 }
 
 /* flip speed goes here */

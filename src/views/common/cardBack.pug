@@ -31,8 +31,11 @@ include _mixins
                 label.card-back__check-label
                     input(type="radio" name="radio-test").radio
                     span.radio-custom
-                    span.label Не уверен          
-    nav.nav.nav-welcome.nav-welcome--back
+                    span.label Не уверен 
+    .card-back__btn-wrap 
+        button.btn.btn-card.btn-card--back На главную
+        button.btn.btn-card Войти                    
+    //- nav.nav.nav-welcome.nav-welcome--back
             - var obj = {'На главную':'index.html','Войти':'login.html'} 
                 ul.nav-welcome__list
                   each value,key in obj
