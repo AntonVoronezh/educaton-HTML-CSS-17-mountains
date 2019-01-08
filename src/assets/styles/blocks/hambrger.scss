@@ -3,10 +3,11 @@
   /* Icon 1 */
   
   #nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+    // border: 1px solid #000000;
     width: 30px;
     height: 25px;
     position: relative;
-    z-index: 1000;
+    z-index: 10000;
     // margin: 50px auto;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
