@@ -1,6 +1,6 @@
 import getMenu from "./modules/menu";
 import scrollParallax from "./modules/scrollParallax";
-
+import "./modules/skills";
 
 getMenu();
 
