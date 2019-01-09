@@ -22,9 +22,13 @@
             }
         }
         &--footer {
+            // border: 1px solid #000000;
             margin-right: 0;
             fill: #ffffff;
             opacity: 0.5;
+            &:nth-child(1) {
+                width: 80%;
+            }
             &:hover {
                 fill: #373e42;
                 opacity: 0.85;

@@ -19,7 +19,8 @@ block content
               svg(fill="#ffffff", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
                   polygon(points="0,150 900,150 900,0")
         .blog__wrap
-          aside.blog__aside 
+          aside.blog__aside
+            button.blog__aside-circle
             - 
               var titles = [
                 'Абсолютное позиционирование в CSS: понять раз и навсегда',
@@ -76,3 +77,9 @@ block content
                 p.blog__paragraph В последние годы отмечается еще большее разграничение между традиционным и функциональным программированием в JavaScript. Суть его не в превосходстве одного над другим, а в личных предпочтениях.
                 p.blog__paragraph Конечно же, с функциональным программированием вам придется пересмотреть свое видение кода. Данная концепция активно используется разработчиками в проектах, для которых эффективность и надежность кода стоят на первом месте.
            
+//- .overlay.overlay-plus 
+//-   - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html','Авторизация':'index.html'} 
+//-     ul.overlay__list
+//-       each value,key in obj
+//-         li.overlay__item
+//-           a(href=`${value}` title=`${key}`).overlay__link #{key}

@@ -5,12 +5,53 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        position: relative;
     }
     &__aside {
         // border: 1px solid #000000;
         max-width: 250px;
+        position: relative;
         @include tablets {
+            // display: none;
+            position: fixed;
+            top: 0;
+            background-color: $green;
+            min-width: 70%;
+            height: 100vh;
+            padding-top: 50px; // min-width: 250px;
+            // left: 0;
+            left: calc(-70%-50px);
+            &--active {
+                left: calc(-70%);
+            }
+            &--show{
+                left: 0;
+            }
+        }
+        @include phones {
+            min-width: 250px;
+            left: -300px;
+            &--active {
+                left: -250px;
+            }
+            &--show{
+                left: 0;
+            }
+        }
+        &-circle {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%; // border: 1px solid #000000;
+            position: absolute;
+            right: -35px;
+            top: calc(50%-35px);
+            z-index: -10;
+            background-color: $green;
+            cursor: pointer;
             display: none;
+            @include tablets {
+                display: block;
+            }
         }
     }
     &__main {
@@ -44,6 +85,9 @@
     }
     &__link {
         color: #455a64;
+        @include tablets {
+            color: $white;
+        }
         font-size: 16px;
         font-weight: 400;
         line-height: 26px;
@@ -51,16 +95,28 @@
         transition: color 0.5s;
         &:hover {
             color: #00bfa5;
+            @include tablets {
+                color: $light-grey;
+            }
         }
         &:focus {
             color: darken(#00bfa5, 50%);
+            @include tablets {
+                color: darken($light-grey, 50%);
+            }
         }
         &:active {
             color: #00bfa5;
+            @include tablets {
+                color: $light-grey;
+            }
             text-decoration: underline;
         }
         &--active {
             color: #00bfa5;
+            @include tablets {
+                color: $white;
+            }
             font-size: 16px;
             font-weight: 700;
             line-height: 26px;
