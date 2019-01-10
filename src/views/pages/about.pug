@@ -10,71 +10,93 @@ block content
   main.main
     .container
       .main__top.about
-        .about__left 
-          .about__triangles
-            svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-              polygon(points="0,0 0,150 900,150")
-          .about__wrap 
-            .about__title 
-              .about__back
-                h1.title.main-title.title--about Обо мне
-            .about__text
-              +image('photo/photo.png', 'фото разработчика', 'about__img img')
-              h2.title.second-title Кто я
-              p.text.about__content Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
-              p.text.about__content Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        .about__right 
-        
-          .about__triangles
-            svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-              polygon(points="0,150 900,150 900,0")
-          .about__wrap.about__wrap--right  
-            h2.title.second-title Чем я могу быть вам полезен
-            p.text.about__content Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-            section.skills
-              h3.third-title Frontend
-              .skills-wrap
-                - var skills = ['HTML5', 'CSS3', 'JavaScript & jQuery']
-                 each skill in skills
-                  .skill 
-                    svg(width='120' height='120')
-                      circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
-                      circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
-                    .skill__text #{skill}
-            
-            section.skills
-              h3.third-title Backend
-              .skills-wrap
-                - var skills = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
-                 each skill in skills
-                  .skill 
-                    svg(width='120' height='120')
-                      circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
-                      circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
-                    .skill__text #{skill}
-            
-            section.skills
-              h3.third-title WorkFlow
-              .skills-wrap
-                - var skills = ['Git', 'Gulp', 'Bower']
-                 each skill in skills
-                  .skill 
-                    svg(width='120' height='120')
-                      circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
-                      circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
-                    .skill__text #{skill}
-              //- .skill 
-              //-   svg(width='120' height='120')
-              //-     circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
-              //-     circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
-              //-   .skill__text ff
+        .works__triangles-wrap
+            .works__left 
+              .works__triangles
+                svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+                    polygon(points="0,0 0,150 900,150")
+            .works__right 
+              .works__triangles
+                svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+                    polygon(points="0,150 900,150 900,0")
+        .about__bottom-wrap            
+          .about__left 
+            //- .about__triangles
+            //-   svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+            //-     polygon(points="0,0 0,150 900,150")
+            .about__wrap 
+              .about__title 
+                .about__back
+                  h1.title.main-title.title--about Обо мне
+              .about__text
+                //- +image('photo/photo.png', 'фото разработчика', 'about__img img')
+                picture
+                  source(media='(min-width:1200px)', srcset='./assets/images/photo/photo-default@1.png 1x,\
+                  ./assets/images/photo/photo-default@2.png 2x, ./assets/images/photo/photo-default@3.png 3x')
+                  source(media='(min-width:768px)', srcset='./assets/images/photo/photo-desktop@1.png 1x,\
+                  ./assets/images/photo/photo-desktop@2.png 2x, ./assets/images/photo/photo-desktop@3.png 3x')
+                  source(media='(min-width:480px)', srcset='./assets/images/photo/photo-tablets@1.png 1x,\
+                  ./assets/images/photo/photo-tablets@2.png 2x, ./assets/images/photo/photo-tablets@3.png 3x')
+                  img.about__img.img(alt='фото разработчика', src='./assets/images/photo/photo-phones@1.png', srcset='./assets/images/photo/photo-phones@1.png 1x, \
+                  ./assets/images/photo/photo-phones@2.png 2x, \
+                  ./assets/images/photo/photo-phones@3.png 3x')
+                h2.title.second-title Кто я
+                p.text.about__content Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
+                p.text.about__content Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+          .about__right 
+          
+            //- .about__triangles
+            //-   svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+            //-     polygon(points="0,150 900,150 900,0")
+            .about__wrap.about__wrap--right  
+              h2.title.second-title Чем я могу быть вам полезен
+              p.text.about__content Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+              #skills-component
+              //- section.skills
+              //-   h3.third-title Frontend
+              //-   .skills-wrap
+              //-     - var skills = ['HTML5', 'CSS3', 'JavaScript & jQuery']
+              //-     each skill in skills
+              //-       .skill 
+              //-         svg(width='120' height='120')
+              //-           circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
+              //-           circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
+              //-         .skill__text #{skill}
+              
+              //- section.skills
+              //-   h3.third-title Backend
+              //-   .skills-wrap
+              //-     - var skills = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+              //-     each skill in skills
+              //-       .skill 
+              //-         svg(width='120' height='120')
+              //-           circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
+              //-           circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
+              //-         .skill__text #{skill}
+              
+              //- section.skills
+              //-   h3.third-title WorkFlow
+              //-   .skills-wrap
+              //-     - var skills = ['Git', 'Gulp', 'Bower']
+              //-     each skill in skills
+              //-       .skill 
+              //-         svg(width='120' height='120')
+              //-           circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
+              //-           circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
+              //-         .skill__text #{skill}
+                
+                //- .skill 
+                //-   svg(width='120' height='120')
+                //-     circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
+                //-     circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
+                //-   .skill__text ff
 
       .main__bottom.map 
         address.contact
           h2.title.second-title Контакты
           ul.contact__list
             li.contact__item 
-              +icon('vk', 'contact__img svg', 'ссылка на скайп')
+              +icon('skype', 'contact__img svg', 'ссылка на скайп')
               a(href="skype:skype_kdn" title="ссылка на скайп" class="contact__link" target="_blank")
                 | skype_kdn
             li.contact__item 

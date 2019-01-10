@@ -41,13 +41,21 @@
             background-color: darken($green, 20%);
             text-decoration: underline;
         }
+        &:nth-child(1) {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+    &--back {
+        // align-self: flex-end;
+        // justify-self: flex-end
+        width: 100%;
     }
 }
 
 .nav-footer {
-    // border: 1px solid #000000;
     &__list {
-        display: flex; // justify-content: stretch;
+        display: flex;
     }
     &__item {
         margin-right: 15px;
@@ -57,7 +65,7 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
-        text-decoration: none; // background-color: $green;
+        text-decoration: none;
         transition: color 0.5s;
         &:hover {
             color: #009688;

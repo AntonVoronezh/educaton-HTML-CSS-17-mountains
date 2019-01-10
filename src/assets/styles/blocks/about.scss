@@ -5,24 +5,46 @@
     flex-direction: column;
     position: relative;
     &__top {
-        // height: 500px; // border: 1px solid #000000;
     }
     &__bottom {
-        position: relative; // height: 500px;
-        // border: 1px solid #000000;
+        position: relative; 
     }
 }
 
 .about {
     display: flex;
+    flex-direction: column;
+    &__bottom-wrap {
+        display: flex;
+        @include tablets {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
     &__left {
-        flex: 1; // border: 1px solid #000000;
+        flex: 1; 
+        // border: 1px solid #000000;
         display: flex;
         flex-direction: column;
         min-width: 50%;
+        @include tablets {
+            justify-content: center;
+            align-items: center;
+            width: 90vw;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     }
     &__right {
+        // border: 1px solid #000000;
+        width: 50%;
         flex: 1;
+        width: 50%;
+        @include tablets {
+            width: 90vw;
+            margin-bottom: 20px;
+        }
     }
     &__triangles {
         width: 100%;
@@ -31,19 +53,30 @@
     }
     &__wrap {
         padding-left: 20px;
-        padding-right: 20px; // border: 1px solid red;
+        padding-right: 20px; 
+        // border: 1px solid red;
         height: 100%;
         display: flex;
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         align-items: flex-start;
         &--right {
             flex-direction: column;
             align-items: center;
+            // border: 1px solid #000000;
         }
     }
     &__title {
         display: flex;
         justify-content: center;
         min-width: 50%; // border: 1px solid #000000;
+        @include tablets {
+            width: 100%;
+            margin-bottom: 20px;
+        }
     }
     &__back {
         margin-top: -75px; // border: 1px solid #000000;
@@ -68,11 +101,15 @@
     } 
 
     &__text {
-        width: 50%; // border: 1px solid #000000;
+        width: 50%; 
+        // border: 1px solid #000000;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @include tablets {
+            width: 100%;
+        }
     }
     &__img {
         width: 100%;
@@ -90,6 +127,7 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .triangle {
@@ -101,8 +139,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); // width: 380px;
-    // height: 290px;
+    transform: translate(-50%, -50%); 
+    @include phones {
+        top: 0;
+        left: 0;
+        transform: none;
+    }
     background-color: #fcfcfc;
     opacity: 0.85;
     padding: 40px;

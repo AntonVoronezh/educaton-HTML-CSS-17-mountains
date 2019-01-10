@@ -8,7 +8,8 @@ html(lang="ru")
     meta(charset="utf-8")
     meta(content="ie=edge" http-equiv="x-ua-compatible")
     meta(content="width=device-width, initial-scale=1" name="viewport")
-    
+    link(rel='shortcut icon' href='./assets/images/welcome/fav_mount.png' type='image/png')
+
     title Portfolio | #{title}
     link(rel='stylesheet' href='main.min.css')
   body
@@ -18,6 +19,7 @@ html(lang="ru")
         block content
 
       include ./common/footer.pug
+      include ./components/entry.pug
 
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')

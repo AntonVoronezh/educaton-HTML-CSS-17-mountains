@@ -22,11 +22,15 @@ block content
         .works__header 
           .works__back
             h1.title.main-title.title--works Мои работы
+
         .works__wrap
-          .works__left
-            .works__left-wrap 
-              ul.works__list
-                - var works = {'Сайт школы онлайн Образования':'HTML , CSS, JAVASCRIPT'}
+          //- .works__wrap-list list
+          //- .works__wrap-img img
+          //- .works__wrap-zero zero
+          //- .works__wrap-control control
+          .works__wrap-list 
+            ul.works__list
+              - var works = {'Сайт школы онлайн Образования':'HTML , CSS, JAVASCRIPT'}
                 each value,key in works
                   li.works__item
                     h2.title.second-title #{key}
@@ -34,29 +38,30 @@ block content
                     button.btn-works-item 
                       +icon('link', 'works__button-icon svg', 'ссылка на ' + key)
                       |Посмотреть сайт
-          .works__right 
-            .works__right-wrap
-              .works__right-top
-                +image('works/work-1.png', 'фото', 'works__img')
-              .works__right-bottom
-                .works__right-block
-                  a(href="#" title="предыдущая работа").works__right-link
-                    +image('works/work-2.png', 'фото', 'works__img')
-                    .works__right-phone 
-                      +icon('portf_arrow_down', 'works__img-svg  svg', 'следующая работа')
-                      span.visually-hidden дальше
-                .works__right-block
-                  a(href="#" title="следующая работа").works__right-link
-                    +image('works/work-3.png', 'фото', 'works__img')
-                    .works__right-phone 
-                      +icon('portf_arrow_up', 'works__img-svg  svg', 'следующая работа')
-                      span.visually-hidden дальше
+          .works__wrap-img 
+            +image('works/work-1.png', 'фото', 'works__img')
+          .works__wrap-zero 
+          .works__wrap-control 
+            .works__right-block
+              a(href="#" title="предыдущая работа").works__right-link
+                +image('works/work-2.png', 'фото', 'works__img')
+                .works__right-phone 
+                  +icon('portf_arrow_down', 'works__img-svg  svg', 'следующая работа')
+                  span.visually-hidden дальше
+            .works__right-block
+              a(href="#" title="следующая работа").works__right-link
+                +image('works/work-3.png', 'фото', 'works__img')
+                .works__right-phone 
+                  +icon('portf_arrow_up', 'works__img-svg  svg', 'следующая работа')
+                  span.visually-hidden дальше
+       
         .works__header.works__header--bottom
           .works__back.works__back--bottom
             h2.title.main-title.title--works Что обо мне говорят
       .main__bottom.comments
         .comments__top
           .comments__top-left
+            +image('works/commas.png', 'кавычки', 'comments__commas')
             p.comments__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!
             .comments__photo-sign
               .comments__photo
@@ -65,6 +70,7 @@ block content
                 span.bold Ковальчук Дмитрий 
                 span.normal основатель Loftschool
           .comments__top-right
+            +image('works/commas.png', 'кавычки', 'comments__commas')
             p.comments__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
               .comments__photo-sign
                 .comments__photo
