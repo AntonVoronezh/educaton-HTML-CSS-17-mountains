@@ -1,12 +1,17 @@
 import getMenu from "./modules/menu";
 import scrollParallax from "./modules/scrollParallax";
-import asideMenu from "./modules/asideMenu";
+// import asideMenu from "./modules/asideMenu";
+import scrollBlogNavigation from "./modules/scrollBlogNavigation";
+
 
 getMenu();
-asideMenu();
+scrollBlogNavigation();
+// asideMenu();
+
+
 
 window.addEventListener("scroll", () => {
     const wScroll = window.pageYOffset;
   
-    scrollParallax().init(wScroll);
+    // scrollParallax().init(wScroll);
   });

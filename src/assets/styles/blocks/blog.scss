@@ -8,8 +8,8 @@
         position: relative;
     }
     &__aside {
-        // border: 1px solid #000000;
-        max-width: 250px;
+        border: 1px solid #000000;
+        min-width: 250px;
         position: relative;
         @include tablets {
             // display: none;
@@ -27,6 +27,7 @@
             &--show{
                 left: 0;
             }
+
         }
         @include phones {
             min-width: 250px;
@@ -55,8 +56,6 @@
         }
     }
     &__main {
-        // border: 1px solid #000000;
-        max-width: 980px;
         margin-left: 50px;
         @include tablets {
             margin-left: 0;
@@ -70,6 +69,12 @@
     &__list {
         display: flex;
         flex-direction: column;
+        border: 1px solid #000000;
+        &--fixed {
+            position: fixed;
+            top: 20px;
+            width: 250px;
+        }
     }
     &__item {
         margin-bottom: 15px;
