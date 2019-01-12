@@ -1,16 +1,15 @@
 export default function scrollBlogLinks() {
 
-    const elem = document.querySelector('.block');
     const texts = document.querySelectorAll('.blog__header');
     const items = document.querySelectorAll('.blog__item');
     const links = document.querySelectorAll('.blog__link');
     const textsOffset = [];
 
     texts.forEach(function (text) {
-        textsOffset.push(text.offsetTop);
-    })
-    console.log(links);
 
+        textsOffset.push(getCoords(text).top);
+        
+    })
 
 
     window.addEventListener('scroll', function () {
@@ -18,8 +17,7 @@ export default function scrollBlogLinks() {
         const scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
         textsOffset.forEach(function (offset, i) {
-            console.log(scrolled, offset);
-            
+            // console.log(scrolled, offset);
 
             if (scrolled >= offset) {
 
@@ -44,5 +42,29 @@ export default function scrollBlogLinks() {
 
     });
 
+    function getCoords(elem) {
+        // (1)
+        var box = elem.getBoundingClientRect();
+      
+        var body = document.body;
+        var docEl = document.documentElement;
+      
+        // (2)
+        var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+        var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+      
+        // (3)
+        var clientTop = docEl.clientTop || body.clientTop || 0;
+        var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+      
+        // (4)
+        var top = box.top + scrollTop - clientTop;
+        var left = box.left + scrollLeft - clientLeft;
+      
+        return {
+          top: top,
+          left: left
+        };
+      }
 
 }
