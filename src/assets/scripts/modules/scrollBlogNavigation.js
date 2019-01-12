@@ -6,7 +6,7 @@ export default function scrollBlogNavigation() {
     setInterval(function () {
 
         width = window.innerWidth || document.documentElement.clientWidth;
-        console.log(width);
+        // console.log(width);
 
 
         if (width > 767) {
