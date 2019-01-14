@@ -3,6 +3,10 @@ export default function smoothScrollTo() {
     const links = document.querySelectorAll('.blog__link');
 
 
+    
+
+
+
     window.smoothScrollTo = (function () {
         var timer, start, factor;
 
@@ -37,14 +41,10 @@ export default function smoothScrollTo() {
 
     links.forEach(function (elem, i) {
 
-        elem.addEventListener('click', () => {
+        elem.addEventListener('click', (event) => {
 
-            // smoothScrollTo(0, 500);
-
-            // console.log(i);
-
-
-            // smoothScrollTo(document.getElementById(`'${i}'`), 900);
+            // smoothScrollTo(document.querySelector(`#id${i}`).offsetTop, 900);
+            // http://jsfiddle.net/DruwJ/1/
 
         });
 

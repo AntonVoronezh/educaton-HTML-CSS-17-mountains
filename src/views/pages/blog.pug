@@ -33,14 +33,15 @@ block content
                 
                 if i === 0
                   li.blog__item.blog__item--active 
-                    a(href=`blog.html#${i}`).blog__link.blog__link--active #{title}
+                    a(href=`#id${i}`).blog__link.blog__link--active #{title}
                 else
                   li.blog__item
-                    a(href=`blog.html#${i}`).blog__link #{title}
+                    a(href=`#id${i}`).blog__link #{title}
+
 
           main.blog__main
             article.blog__article 
-              header.blog__header#0
+              header.blog__header#id0
                 h2.second-title.second-title--blog Абсолютное позиционирование в CSS: понять раз и навсегда
               time.blog__time(datetime="2019-01-29 19:00") 29 января 2019
               section.blog__section
@@ -49,7 +50,7 @@ block content
                 p.blog__paragraph Когда вы устанавливаете position: absolute, на первый план выходит не сам элемент, а его родительский контейнер, ведь относительно него и осуществляется позиционирование в CSS. Сложность в том, что это не всегда непосредственный родитель элемента.
             
             article.blog__article 
-              header.blog__header#1
+              header.blog__header#id1
                 h2.second-title.second-title--blog Лучшие JavaScript-инструменты и тенденции за 2018 год
               time.blog__time(datetime="2019-01-23 19:00") 23 января 2019
               section.blog__section
@@ -59,7 +60,7 @@ block content
                 p.blog__paragraph Теперь библиотеки и другие JavaScript-инструменты не только объединяются в общие разделы (фронтенд, бэкенд и т. д.), но и каждой из них выделяется отдельная страница. Таким образом, можно убрать все лишнее и сконцентрироваться на изучении только нужных тем.
             
             article.blog__article 
-              header.blog__header#2
+              header.blog__header#id2
                 h2.second-title.second-title--blog Полное руководство по элементам HTML-формы
               time.blog__time(datetime="2019-01-19 19:00") 19 января 2019
               section.blog__section
@@ -68,7 +69,7 @@ block content
                 p.blog__paragraph HTML-формы требуются для сбора данных от посетителей сайта. Например, при регистрации на Uber, Netflix или Facebook пользователь вводит свое имя, почту и пароль.
             
             article.blog__article 
-              header.blog__header#3
+              header.blog__header#id3
                 h2.second-title.second-title--blog Основы функционального программирования в JavaScript
               time.blog__time(datetime="2019-01-10 19:00") 10 января 2019
               section.blog__section
@@ -77,7 +78,8 @@ block content
                 p.blog__paragraph В последние годы отмечается еще большее разграничение между традиционным и функциональным программированием в JavaScript. Суть его не в превосходстве одного над другим, а в личных предпочтениях.
                 p.blog__paragraph Конечно же, с функциональным программированием вам придется пересмотреть свое видение кода. Данная концепция активно используется разработчиками в проектах, для которых эффективность и надежность кода стоят на первом месте.
                 p.blog__paragraph Конечно же, с функциональным программированием вам придется пересмотреть свое видение кода. Данная концепция активно используется разработчиками в проектах, для которых эффективность и надежность кода стоят на первом месте.
-           
+                p.blog__paragraph В последние годы отмечается еще большее разграничение между традиционным и функциональным программированием в JavaScript. Суть его не в превосходстве одного над другим, а в личных предпочтениях.
+
 //- .overlay.overlay-plus 
 //-   - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html','Авторизация':'index.html'} 
 //-     ul.overlay__list
