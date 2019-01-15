@@ -5,10 +5,9 @@ import asideMenu from "./modules/asideMenu";
 import scrollBlogNavigation from "./modules/scrollBlogNavigation";
 import scrollBlogLinks from "./modules/scrollBlogLinks";
 import scrollBlogById from "./modules/scrollBlogById";
-import preloader from "./modules/preloader";
+import "./modules/preloader";
 
 
-preloader();
 smoothScrollTo();
 getMenu();
 scrollBlogNavigation();

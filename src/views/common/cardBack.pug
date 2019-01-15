@@ -7,7 +7,7 @@ include _mixins
             .card-back__input-wrap
                 .card-back__img-wrap
                     +icon('login', 'card-back__img svg', 'Логин')
-            input(type="text", name="login", placeholder="Логин" required).card-back__login
+            input(type="text", name="login", placeholder="Логин" required="required").card-back__login
         .card-back__input
             .card-back__input-wrap
                 .card-back__img-wrap
@@ -17,7 +17,7 @@ include _mixins
             legend.card-back__check-legend
                 .visually-hidden Проверка №1
             label.card-back__check-label
-                input(type="checkbox" name="checkbox-test").checkbox
+                input(type="checkbox" name="checkbox-test" ).checkbox
                 span.checkbox-custom
                 span.label Я человек
         fieldset.card-back__check
@@ -35,9 +35,3 @@ include _mixins
     .card-back__btn-wrap 
         button.btn.btn-card.btn-card--back На главную
         button.btn.btn-card.btn-card--login Войти                    
-    //- nav.nav.nav-welcome.nav-welcome--back
-            - var obj = {'На главную':'index.html','Войти':'login.html'} 
-                ul.nav-welcome__list
-                  each value,key in obj
-                    li.nav-welcome__item
-                      a(href=`${value}` title=`${key}`).nav-welcome__link #{key}

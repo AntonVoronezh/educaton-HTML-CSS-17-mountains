@@ -1,4 +1,4 @@
-export default function preloader() {
+(function() {
 
 
     const preloader = document.querySelector('.preloader');
@@ -9,45 +9,40 @@ export default function preloader() {
     const initStrokeDashOffset = 439;
     let loadedImg = 0;
 
+    for (let i = 0; i < images.length; i++) {
+        let img = images[i];
+        img = new Image();
+        img.src = images[i].src;
+        img.onload = imageLoaded;
+    }
 
-    const preloaderPromise = new Promise(function (resolve) {
-        if (preloader) {
-            resolve();
+    function imageLoaded() {
+        loadedImg++;
+
+        const curStrokeDashArray = Math.round(initStrokeDashOffset / imagesCount * loadedImg);
+        rounds.style.strokeDashoffset = initStrokeDashOffset - curStrokeDashArray;
+
+        const percent = Math.round(100 / imagesCount * loadedImg);
+        progress.innerHTML = percent + '%';
+
+    }
+
+    window.addEventListener("load", setStyle);
+
+    function setStyle() {
+
+        if (loadedImg >= imagesCount) {
+            setTimeout(function () {
+                if (!preloader.classList.contains('none')) {
+                    preloader.classList.add('none');
+                }
+            }, 2000);
+            setTimeout(function () {
+                rounds.style.strokeDashoffset = initStrokeDashOffset;
+            }, 3000);
+
         }
-    });
 
-    preloaderPromise.then(function () {
+    }
 
-        for (let i = 0; i < images.length; i++) {
-            let img = images[i];
-            img = new Image();
-            img.src = images[i].src;
-            img.onload = imageLoaded;
-        }
-
-
-        function imageLoaded() {
-            loadedImg++;
-
-            const curStrokeDashArray = Math.round(initStrokeDashOffset / imagesCount * loadedImg);
-            rounds.style.strokeDashoffset = initStrokeDashOffset - curStrokeDashArray;
-
-            const percent = Math.round(100 / imagesCount * loadedImg);
-            progress.innerHTML = percent;
-
-            if (loadedImg >= imagesCount) {
-                setTimeout(function () {
-                    if (!preloader.classList.contains('done')) {
-                        preloader.classList.add('done');
-                    }
-                }, 2000);
-                setTimeout(function () {
-                    rounds.style.strokeDashoffset = initStrokeDashOffset;
-                    progress.innerHTML = 0;
-                }, 3000);
-            }
-        }
-    });
-
-
-}
+})();

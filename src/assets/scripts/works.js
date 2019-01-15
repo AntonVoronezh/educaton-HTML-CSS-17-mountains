@@ -1,10 +1,8 @@
 import getMenu from "./modules/menu";
 import scrollParallax from "./modules/scrollParallax";
 import scrollBlur from "./modules/scrollBlur";
-import preloader from "./modules/preloader";
+import "./modules/preloader";
 
-
-preloader();
 
 getMenu();
 scrollBlur().set();
