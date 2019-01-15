@@ -1,4 +1,5 @@
 import getMenu from "./modules/menu";
+import "./modules/slider";
 import scrollParallax from "./modules/scrollParallax";
 import scrollBlur from "./modules/scrollBlur";
 import "./modules/preloader";

@@ -57,6 +57,16 @@
     &--back {
         margin-top: 30px;
     }
+    @include phones {
+        margin-bottom: 10px;
+        font-size: 25px;
+        line-height: 25px;
+    }
+    @include tablets {
+        margin-bottom: 10px;
+        font-size: 25px;
+        line-height: 25px;
+    }
 }
 
 .third-title {

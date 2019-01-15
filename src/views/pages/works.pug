@@ -24,36 +24,7 @@ block content
             h1.title.main-title.title--works Мои работы
 
         .works__wrap
-          //- .works__wrap-list list
-          //- .works__wrap-img img
-          //- .works__wrap-zero zero
-          //- .works__wrap-control control
-          .works__wrap-list 
-            ul.works__list
-              - var works = {'Сайт школы онлайн Образования':'HTML , CSS, JAVASCRIPT'}
-                each value,key in works
-                  li.works__item
-                    h2.title.second-title #{key}
-                    p.works__item-text #{value}
-                    button.btn-works-item 
-                      +icon('link', 'works__button-icon svg', 'ссылка на ' + key)
-                      |Посмотреть сайт
-          .works__wrap-img 
-            +image('works/work-1.png', 'фото', 'works__img')
-          .works__wrap-zero 
-          .works__wrap-control 
-            .works__right-block
-              a(href="#" title="предыдущая работа").works__right-link
-                +image('works/work-2.png', 'фото', 'works__img')
-                .works__right-phone 
-                  +icon('portf_arrow_down', 'works__img-svg  svg', 'следующая работа')
-                  span.visually-hidden дальше
-            .works__right-block
-              a(href="#" title="следующая работа").works__right-link
-                +image('works/work-3.png', 'фото', 'works__img')
-                .works__right-phone 
-                  +icon('portf_arrow_up', 'works__img-svg  svg', 'следующая работа')
-                  span.visually-hidden дальше
+          #slider-component
        
         .works__header.works__header--bottom
           .works__back.works__back--bottom

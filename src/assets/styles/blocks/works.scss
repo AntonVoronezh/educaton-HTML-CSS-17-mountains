@@ -104,13 +104,20 @@
         display: flex;
         // border: 1px solid #000000;
     }
+    &__item-link {
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+    }
     &__triangles {
         width: 100%;
         margin-top: -150px;
         position: relative;
         // border: 1px solid #000000;
     }
+    
     &__wrap {
+        // border: 1px solid #000000;
         min-height: 650px;
         display: flex;
         flex-wrap: wrap;
@@ -182,10 +189,16 @@
             margin-bottom: 20px;
             padding-top: 15px;
             padding-bottom: 15px;
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 500;
             text-transform: uppercase;
             color: $green;
+            @include phones {
+                font-size: 16px;
+                margin-bottom: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+              }
         }
     }
     &__text {

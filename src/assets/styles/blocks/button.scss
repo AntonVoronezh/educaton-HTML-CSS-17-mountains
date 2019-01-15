@@ -62,8 +62,11 @@
     }
     &:active {
         background-color: #009688;
-        color:#ccc;
+        color: #ccc;
     }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-card {
@@ -81,6 +84,6 @@
     }
     &:active {
         background-color: #009688;
-        color:#ccc;
+        color: #ccc;
     }
 }
