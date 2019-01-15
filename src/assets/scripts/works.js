@@ -2,7 +2,7 @@ import getMenu from "./modules/menu";
 import scrollParallax from "./modules/scrollParallax";
 import scrollBlur from "./modules/scrollBlur";
 import "./modules/preloader";
-import validationFormContact from "./modules/validationForm";
+import validationFormContact from "./modules/validationFormContact";
 
 
 getMenu();
