@@ -79,15 +79,15 @@ block content
                   span.bold Сабанцев Владимир 
                   span.normal преподаватель Loftschool
             
-        //- .comments__bottom 
-        //-   h2.title.second-title Связаться со мной
-        //-   .comments__form.form
-        //-     input(type="text", name="name" placeholder="Имя").form__input
-        //-     input(type="email", name="email" placeholder="Email").form__input
-        //-     textarea(name="text" placeholder="Ваше сообщение").form__textarea
-        //-     .form__wrap
-        //-       input(type="submit", value="Отправить").btn-works-item.form__submit
-        //-       input(type="reset", value="Очистить").btn-works-item.form__reset
+        .comments__bottom 
+          h2.title.second-title Связаться со мной
+          form(action="server.php" method="POST" autocomplete).comments__form.form
+            input(type="text", name="name" placeholder="Имя"  required="" minlength="3" maxlength="100").form__input
+            input(type="email", name="email" placeholder="Email" required).form__input
+            textarea(name="text" placeholder="Ваше сообщение").form__textarea
+            .form__wrap
+              input(type="submit", value="Отправить").btn-works-item.form__submit
+              input(type="reset", value="Очистить").btn-works-item.form__reset
 
         .comments__wrap   
           .comments__back  

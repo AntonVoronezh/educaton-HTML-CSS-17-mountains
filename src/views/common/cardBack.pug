@@ -2,36 +2,39 @@ include _mixins
 
 .welcome__center-wrap.welcome__center-wrap--back
     h2.title.second-title.second-title--back Авторизуйтесь
-    form.card-back
-        .card-back__input
-            .card-back__input-wrap
-                .card-back__img-wrap
-                    +icon('login', 'card-back__img svg', 'Логин')
-            input(type="text", name="login", placeholder="Логин" required="required").card-back__login
-        .card-back__input
-            .card-back__input-wrap
-                .card-back__img-wrap
-                    +icon('password', 'card-back__img svg', 'Логин')    
-            input(type="password", name="pass", placeholder="Пароль" required).card-back__pass
-        fieldset.card-back__check
-            legend.card-back__check-legend
-                .visually-hidden Проверка №1
-            label.card-back__check-label
-                input(type="checkbox" name="checkbox-test" ).checkbox
-                span.checkbox-custom
-                span.label Я человек
-        fieldset.card-back__check
-            legend.card-back__check-legend Вы точно не робот?
-                .visually-hidden Проверка №2
-            .card-back__check-bottom    
+    form(action="server.php" method="POST" autocomplete).card-back
+        .card-back__top
+            .card-back__input
+                .card-back__input-wrap
+                    .card-back__img-wrap
+                        +icon('login', 'card-back__img svg', 'Логин')
+                input(type="text" name="login" placeholder="Логин" required="" minlength="3" maxlength="10").card-back__login
+                span.form__error Это поле должно содержать никнейм пользователя от 3 до 10 символов
+            .card-back__input
+                .card-back__input-wrap
+                    .card-back__img-wrap
+                        +icon('password', 'card-back__img svg', 'Логин')    
+                input(type="password" name="pass" placeholder="Пароль" required="" minlength="3" maxlength="10").card-back__pass
+                span.form__error Это поле должно содержать пароль пользователя от 3 до 10 символов
+            fieldset.card-back__check
+                legend.card-back__check-legend
+                    .visually-hidden Проверка №1
                 label.card-back__check-label
-                    input(type="radio" name="radio-test").radio
-                    span.radio-custom
-                    span.label Да   
-                label.card-back__check-label
-                    input(type="radio" name="radio-test").radio
-                    span.radio-custom
-                    span.label Не уверен 
-    .card-back__btn-wrap 
-        button.btn.btn-card.btn-card--back На главную
-        button.btn.btn-card.btn-card--login Войти                    
+                    input(type="checkbox" name="checkbox-test" ).checkbox
+                    span.checkbox-custom
+                    span.label Я человек
+            fieldset.card-back__check
+                legend.card-back__check-legend Вы точно не робот?
+                    .visually-hidden Проверка №2
+                .card-back__check-bottom    
+                    label.card-back__check-label
+                        input(type="radio" name="radio-test").radio
+                        span.radio-custom
+                        span.label Да   
+                    label.card-back__check-label
+                        input(type="radio" name="radio-test").radio
+                        span.radio-custom
+                        span.label Не уверен 
+        .card-back__btn-wrap 
+            button.btn.btn-card.btn-card--back На главную
+            button(type='submit').btn.btn-card.btn-card--login Войти                    

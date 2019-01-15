@@ -1,4 +1,5 @@
 .form {
+    // border: 1px solid #000000;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -35,4 +36,24 @@
         border: none;
         border-left: 1px solid #fff;
     }
+}
+
+.form__error {
+	color: red;
+	text-align: left;
+	font-size: 13px;
+	display: block;
+	margin-top: 3px;
+	display: none;
+}
+
+input:valid:not(:placeholder-shown) {
+	border-color: green;
+}
+
+input:invalid:not(:placeholder-shown) {
+	border-color: red;
+}
+input:invalid:not(:placeholder-shown) ~ .form__error {
+	display: block;
 }
