@@ -13,10 +13,10 @@ export default function scrollBlur() {
           posTop = -wrapper.offsetTop,
           blurCSS = blur.style;
 
-          // console.log(imgWidth, imgWidthBack);
+          console.log(imgWidth, imgWidthBack);
         //   console.log(-wrapper.offsetLeft, -wrapper.offsetTop);
   
-        blurCSS.backgroundSize = `${imgWidth}px auto`;
+        blurCSS.backgroundSize = `${imgWidth}px`;
         blurCSS.backgroundPosition = `${posLeft}px ${posTop}px`;
       }
     };
@@ -35,7 +35,7 @@ export default function scrollBlur() {
     //   }
     // };
 
-    //Схематичная разметка для понимания
+    // Схематичная разметка для понимания
     // section.b-works-what
     //     form.b-works-form
     //         .b-works-form__blur

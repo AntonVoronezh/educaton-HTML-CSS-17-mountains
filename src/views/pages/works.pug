@@ -8,63 +8,64 @@ block scripts
 
 block content
   main.main
+    |ggggggggggggggg
+    .main__top.works
+      .works__triangles-wrap
+        .works__left 
+          .works__triangles
+            svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+                polygon(points="0,0 0,150 900,150")
+        .works__right 
+          .works__triangles
+            svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+                polygon(points="0,150 900,150 900,0")
+      .works__header 
+        .works__back
+          h1.title.main-title.title--works Мои работы
     .container
-      .main__top.works
-        .works__triangles-wrap
-          .works__left 
-            .works__triangles
-              svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-                  polygon(points="0,0 0,150 900,150")
-          .works__right 
-            .works__triangles
-              svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-                  polygon(points="0,150 900,150 900,0")
-        .works__header 
-          .works__back
-            h1.title.main-title.title--works Мои работы
-
-        .works__wrap
-          #slider-component
+      .works__wrap
+        #slider-component
        
         .works__header.works__header--bottom
           .works__back.works__back--bottom
             h2.title.main-title.title--works Что обо мне говорят
-      .main__bottom.comments
-        .comments__top
-          .comments__top-left
-            +image('works/commas.png', 'кавычки', 'comments__commas')
-            p.comments__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!
-            .comments__photo-sign
-              .comments__photo
-                +image('works/review-photo-1.jpg', 'Ковальчук Дмитрий', 'comments__img')
-              .comments__sign  
-                span.bold Ковальчук Дмитрий 
-                span.normal основатель Loftschool
-          .comments__top-right
-            +image('works/commas.png', 'кавычки', 'comments__commas')
-            p.comments__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        .main__bottom.comments
+          .comments__top
+            .comments__top-left
+              +image('works/commas.png', 'кавычки', 'comments__commas')
+              p.comments__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!
               .comments__photo-sign
                 .comments__photo
-                  +image('works/review-photo-2.jpg', 'Сабанцев Владимир', 'comments__img')
+                  +image('works/review-photo-1.jpg', 'Ковальчук Дмитрий', 'comments__img')
                 .comments__sign  
-                  span.bold Сабанцев Владимир 
-                  span.normal преподаватель Loftschool
+                  span.bold Ковальчук Дмитрий 
+                  span.normal основатель Loftschool
+            .comments__top-right
+              +image('works/commas.png', 'кавычки', 'comments__commas')
+              p.comments__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .comments__photo-sign
+                  .comments__photo
+                    +image('works/review-photo-2.jpg', 'Сабанцев Владимир', 'comments__img')
+                  .comments__sign  
+                    span.bold Сабанцев Владимир 
+                    span.normal преподаватель Loftschool
+              
+          .comments__bottom 
             
-        .comments__bottom 
-          h2.title.second-title Связаться со мной
-          form(action="server.php" method="POST" autocomplete).comments__form.form
-            input(type="text", name="name" placeholder="Имя"  required="" minlength="2" maxlength="100").form__input.form__input-name
-            span.form__error Это поле должно содержать имя пользователя от 2 символов
-            input(type="email", name="email" placeholder="Email" required="" minlength="6").form__input.form__input-mail
-            span.form__error Это поле должно содержать Email пользователя от 6 символов
-            textarea(name="text" placeholder="Ваше сообщение" required="" minlength="5").form__textarea
-            span.form__error Это поле должно содержать текст пользователя от 5 символов
-            .form__wrap
-              input(type="submit", value="Отправить").btn-works-item.form__submit
-              input(type="reset", value="Очистить").btn-works-item.form__reset
-
-        .comments__wrap   
-          .comments__back  
-        a(href="#").comments__bottom-link
-          +icon('portf_arrow_up', 'header__img  svg', 'вверх')
-          span.visually-hidden дальше 
+              h2.title.second-title Связаться со мной
+              form(action="server.php" method="POST" autocomplete).comments__form.form
+                input(type="text", name="name" placeholder="Имя"  required="" minlength="2" maxlength="100").form__input.form__input-name
+                span.form__error Это поле должно содержать имя пользователя от 2 символов
+                input(type="email", name="email" placeholder="Email" required="" minlength="6").form__input.form__input-mail
+                span.form__error Это поле должно содержать Email пользователя от 6 символов
+                textarea(name="text" placeholder="Ваше сообщение" required="" minlength="5").form__textarea
+                span.form__error Это поле должно содержать текст пользователя от 5 символов
+                .form__wrap
+                  input(type="submit", value="Отправить").btn-works-item.form__submit
+                  input(type="reset", value="Очистить").btn-works-item.form__reset
+              //- +image('works/bg.png', 'фон', 'comments__backt')
+          .comments__wrap   
+            .comments__back  
+          a(href="#").comments__bottom-link
+            +icon('portf_arrow_up', 'header__img  svg', 'вверх')
+            span.visually-hidden дальше 

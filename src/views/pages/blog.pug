@@ -7,17 +7,18 @@ block scripts
   script(src='blog.bundle.js')
 
 block content
-    .container
-      .main__top.blog
-        .works__triangles-wrap
-          .works__left 
-            .works__triangles
-              svg(fill="#ffffff", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-                  polygon(points="0,0 0,150 900,150")
-          .works__right 
-            .works__triangles
-              svg(fill="#ffffff", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-                  polygon(points="0,150 900,150 900,0")
+    
+    .main__top.blog
+      .works__triangles-wrap
+        .works__left 
+          .works__triangles
+            svg(fill="#ffffff", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+                polygon(points="0,0 0,150 900,150")
+        .works__right 
+          .works__triangles
+            svg(fill="#ffffff", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+                polygon(points="0,150 900,150 900,0")
+      .container
         .blog__wrap
           aside.blog__aside
             button.blog__aside-circle

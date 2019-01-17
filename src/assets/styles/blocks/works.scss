@@ -222,18 +222,31 @@
 }
 
 .comments {
-    height: 160vh;
+    position: relative;
+    &__backt {
+        // border: 1px solid #000000;
+        // z-index: -1;
+        width: 100%;
+        min-width: 900px;
+        position: absolute;
+        top: 0;
+        left: 0;
+right: 0;
+bottom: 0;
+    }
+    height: 1400px;
     // height: 100%;
-    background: url('assets/images/works/bg.png');
+    // background: url('assets/images/works/bg.png');
     width: 100%;
     @include tablets { 
         background-position: center 200px;  
         height: 100%;
     }
 
-    background-position: top center;
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: 2000px auto;
+    background-size: 100% auto;
+    // background-size: 945px auto;
     position: relative;
 
     display: flex;
@@ -316,7 +329,7 @@
         // border: 1px solid #000000;
         position: absolute;
         left: 50%;
-        top: 60%;
+        top: 50%;
         transform: translate(-50%, -50%);
         height: 500px;
         width: 380px;
@@ -339,7 +352,7 @@
     &__wrap {
         position: absolute;
         left: 50%;
-        top: 60%;
+        top: 50%;
         transform: translate(-50%, -50%);
         height: 500px;
         width: 380px;
@@ -355,9 +368,9 @@
         right: 0;
         bottom: 0;
         background: url('assets/images/works/bg.png');
-        background-position: center center;
         background-repeat: no-repeat;
-        background-size: 2000px auto;
+        background-position: center center;
+        background-size: contain;
         filter: blur(1px);
         /* background-position: 0% 0%; */
         // background-position: -830px -380px;
