@@ -13,8 +13,10 @@ html(lang="ru")
     title Portfolio | #{title}
     link(rel='stylesheet' href='main.min.css')
   body
+  
     .wrapper
       .maincontent
+        include ./common/preloader.pug
         include ./common/header.pug
         block content
 

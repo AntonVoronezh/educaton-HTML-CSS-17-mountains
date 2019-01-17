@@ -8,17 +8,18 @@ block scripts
 
 block content
   main.main
-    .container
-      .main__top.about
-        .works__triangles-wrap
-            .works__left 
-              .works__triangles
-                svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-                    polygon(points="0,0 0,150 900,150")
-            .works__right 
-              .works__triangles
-                svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-                    polygon(points="0,150 900,150 900,0")
+    
+    .main__top.about
+      .works__triangles-wrap
+          .works__left 
+            .works__triangles
+              svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+                  polygon(points="0,0 0,150 900,150")
+          .works__right 
+            .works__triangles
+              svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+                  polygon(points="0,150 900,150 900,0")
+      .container            
         .about__bottom-wrap            
           .about__left 
             //- .about__triangles
@@ -44,53 +45,11 @@ block content
                 p.text.about__content Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
                 p.text.about__content Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
           .about__right 
-          
-            //- .about__triangles
-            //-   svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-            //-     polygon(points="0,150 900,150 900,0")
             .about__wrap.about__wrap--right  
               h2.title.second-title Чем я могу быть вам полезен
               p.text.about__content Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
               #skills-component
-              //- section.skills
-              //-   h3.third-title Frontend
-              //-   .skills-wrap
-              //-     - var skills = ['HTML5', 'CSS3', 'JavaScript & jQuery']
-              //-     each skill in skills
-              //-       .skill 
-              //-         svg(width='120' height='120')
-              //-           circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
-              //-           circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
-              //-         .skill__text #{skill}
-              
-              //- section.skills
-              //-   h3.third-title Backend
-              //-   .skills-wrap
-              //-     - var skills = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
-              //-     each skill in skills
-              //-       .skill 
-              //-         svg(width='120' height='120')
-              //-           circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
-              //-           circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
-              //-         .skill__text #{skill}
-              
-              //- section.skills
-              //-   h3.third-title WorkFlow
-              //-   .skills-wrap
-              //-     - var skills = ['Git', 'Gulp', 'Bower']
-              //-     each skill in skills
-              //-       .skill 
-              //-         svg(width='120' height='120')
-              //-           circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
-              //-           circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
-              //-         .skill__text #{skill}
-                
-                //- .skill 
-                //-   svg(width='120' height='120')
-                //-     circle(r='50' cx='60' cy='60' fill='#dfdcd5' stroke='#00bfa5' stroke-width='15' stroke-dasharray="110%")
-                //-     circle(r='35' cx='60' cy='60' fill='#eeebdf' stroke='#00bfa5' stroke-width='0')
-                //-   .skill__text ff
-
+             
       .main__bottom.map 
         address.contact
           h2.title.second-title Контакты

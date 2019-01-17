@@ -8,87 +8,50 @@ block scripts
 
 block content
   main.main
+    .main__top.works
+      .works__triangles-wrap
+        .works__left 
+          .works__triangles
+            svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+                polygon(points="0,0 0,150 900,150")
+        .works__right 
+          .works__triangles
+            svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
+                polygon(points="0,150 900,150 900,0")
+      .works__header 
+        .works__back
+          h1.title.main-title.title--works Мои работы
     .container
-      .main__top.works
-        .works__triangles-wrap
-          .works__left 
-            .works__triangles
-              svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-                  polygon(points="0,0 0,150 900,150")
-          .works__right 
-            .works__triangles
-              svg(fill="#eeebdf", viewbox="0 0 900 150", class="triangle", preserveAspectRatio="none")
-                  polygon(points="0,150 900,150 900,0")
-        .works__header 
-          .works__back
-            h1.title.main-title.title--works Мои работы
-
-        .works__wrap
-          //- .works__wrap-list list
-          //- .works__wrap-img img
-          //- .works__wrap-zero zero
-          //- .works__wrap-control control
-          .works__wrap-list 
-            ul.works__list
-              - var works = {'Сайт школы онлайн Образования':'HTML , CSS, JAVASCRIPT'}
-                each value,key in works
-                  li.works__item
-                    h2.title.second-title #{key}
-                    p.works__item-text #{value}
-                    button.btn-works-item 
-                      +icon('link', 'works__button-icon svg', 'ссылка на ' + key)
-                      |Посмотреть сайт
-          .works__wrap-img 
-            +image('works/work-1.png', 'фото', 'works__img')
-          .works__wrap-zero 
-          .works__wrap-control 
-            .works__right-block
-              a(href="#" title="предыдущая работа").works__right-link
-                +image('works/work-2.png', 'фото', 'works__img')
-                .works__right-phone 
-                  +icon('portf_arrow_down', 'works__img-svg  svg', 'следующая работа')
-                  span.visually-hidden дальше
-            .works__right-block
-              a(href="#" title="следующая работа").works__right-link
-                +image('works/work-3.png', 'фото', 'works__img')
-                .works__right-phone 
-                  +icon('portf_arrow_up', 'works__img-svg  svg', 'следующая работа')
-                  span.visually-hidden дальше
+      .works__wrap
+        #slider-component
        
         .works__header.works__header--bottom
           .works__back.works__back--bottom
             h2.title.main-title.title--works Что обо мне говорят
-      .main__bottom.comments
-        .comments__top
-          .comments__top-left
-            +image('works/commas.png', 'кавычки', 'comments__commas')
-            p.comments__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!
-            .comments__photo-sign
-              .comments__photo
-                +image('works/review-photo-1.jpg', 'Ковальчук Дмитрий', 'comments__img')
-              .comments__sign  
-                span.bold Ковальчук Дмитрий 
-                span.normal основатель Loftschool
-          .comments__top-right
-            +image('works/commas.png', 'кавычки', 'comments__commas')
-            p.comments__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        .main__bottom.comments
+          .comments__top
+            .comments__top-left
+              +image('works/commas.png', 'кавычки', 'comments__commas')
+              p.comments__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!
               .comments__photo-sign
                 .comments__photo
-                  +image('works/review-photo-2.jpg', 'Сабанцев Владимир', 'comments__img')
+                  +image('works/review-photo-1.jpg', 'Ковальчук Дмитрий', 'comments__img')
                 .comments__sign  
-                  span.bold Сабанцев Владимир 
-                  span.normal преподаватель Loftschool
-        .comments__bottom
-          h2.title.second-title Связаться со мной
-          .comments__form.form
-            input(type="text", name="name" placeholder="Имя").form__input
-            input(type="email", name="email" placeholder="Email").form__input
-            textarea(name="text" placeholder="Ваше сообщение").form__textarea
-            .form__wrap
-              input(type="submit", value="Отправить").btn-works-item.form__submit
-              input(type="reset", value="Очистить").btn-works-item.form__reset
-        a(href="#").comments__bottom-link
+                  span.bold Ковальчук Дмитрий 
+                  span.normal основатель Loftschool
+            .comments__top-right
+              +image('works/commas.png', 'кавычки', 'comments__commas')
+              p.comments__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .comments__photo-sign
+                  .comments__photo
+                    +image('works/review-photo-2.jpg', 'Сабанцев Владимир', 'comments__img')
+                  .comments__sign  
+                    span.bold Сабанцев Владимир 
+                    span.normal преподаватель Loftschool
+              
+          .comments__bottom 
+            include ../common/callback.pug
+           
+          a(href="#").comments__bottom-link
             +icon('portf_arrow_up', 'header__img  svg', 'вверх')
-            span.visually-hidden дальше      
-
-
+            span.visually-hidden дальше 

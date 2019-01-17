@@ -1,11 +1,11 @@
-if title === 'Обо мне'
+if title === 'Обо мне' 
   footer.footer.footer--about
    .container
       .footer__wrap
         .footer__top 
           .footer__top-left
             nav.nav.nav-footer
-              - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html','Авторизация':'login.html'} 
+              - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html','Авторизация':'index.html'} 
                 ul.nav-footer__list
                   each value,key in obj
                     li.nav-footer__item
@@ -30,7 +30,7 @@ if title !== 'Обо мне'
         .footer__top 
           .footer__top-left
             nav.nav.nav-footer
-              - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html','Авторизация':'login.html'} 
+              - var obj = {'Мои работы':'works.html','Обо мне':'about.html','Блог':'blog.html','Авторизация':'index.html'} 
                 ul.nav-footer__list
                   each value,key in obj
                     li.nav-footer__item

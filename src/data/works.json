@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "title" : "ШКОЛА ОНЛАЙН-ОБРАЗОВАНИЯ LOFTSCHOOL",
+      "skills" : "HTML, CSS, JAVASCRIPT",
+      "photo" : "/assets/images/works/work-1.png",
+      "link" : "//google.com"
+    },
+    {
+      "id": 2,
+      "title" : "АГЕНСТВО ИНТЕРНЕТ РЕШЕНИЙ IT LOFT",
+      "skills" : "Node, Express, MongoDB, Angular",
+      "photo" : "/assets/images/works/work-2.png",
+      "link" : "//yandex.ru"
+    },
+    {
+      "id": 3,
+      "title" : "ПОРТАЛ ОБУЧАЮЩИХ УРОКОВ LOFTSCHOOL",
+      "skills" : "Ruby on Rails, JavaScript, Restfull",
+      "photo" : "/assets/images/works/work-3.png",
+      "link" : "//rambler.ru"
+    },
+    {
+      "id": 4,
+      "title" : "САЙТ АТМА-ЙОГА",
+      "skills" : "UX, Design, SEO",
+      "photo" : "/assets/images/works/work-4.png",
+      "link" : "//vk.com"
+    }
+  ]
