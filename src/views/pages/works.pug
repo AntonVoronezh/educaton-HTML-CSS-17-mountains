@@ -8,7 +8,6 @@ block scripts
 
 block content
   main.main
-    |ggggggggggggggg
     .main__top.works
       .works__triangles-wrap
         .works__left 
@@ -51,21 +50,8 @@ block content
                     span.normal преподаватель Loftschool
               
           .comments__bottom 
-            
-              h2.title.second-title Связаться со мной
-              form(action="server.php" method="POST" autocomplete).comments__form.form
-                input(type="text", name="name" placeholder="Имя"  required="" minlength="2" maxlength="100").form__input.form__input-name
-                span.form__error Это поле должно содержать имя пользователя от 2 символов
-                input(type="email", name="email" placeholder="Email" required="" minlength="6").form__input.form__input-mail
-                span.form__error Это поле должно содержать Email пользователя от 6 символов
-                textarea(name="text" placeholder="Ваше сообщение" required="" minlength="5").form__textarea
-                span.form__error Это поле должно содержать текст пользователя от 5 символов
-                .form__wrap
-                  input(type="submit", value="Отправить").btn-works-item.form__submit
-                  input(type="reset", value="Очистить").btn-works-item.form__reset
-              //- +image('works/bg.png', 'фон', 'comments__backt')
-          .comments__wrap   
-            .comments__back  
+            include ../common/callback.pug
+           
           a(href="#").comments__bottom-link
             +icon('portf_arrow_up', 'header__img  svg', 'вверх')
             span.visually-hidden дальше 

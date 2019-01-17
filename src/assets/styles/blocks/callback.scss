@@ -1,0 +1,48 @@
+.callback {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding-top: 20px;
+    width: 380px;
+    margin: 0 auto 300px auto;
+    overflow: hidden;
+    @include tablets {
+        margin: 0 auto 100px auto;
+    }
+    @include phones {
+        width: 300px;
+    }
+}
+
+.callback__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    &-img {
+        object-fit: contain;
+    }
+}
+
+.callback__blur {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: url("./assets/images/works/bg.png") center no-repeat;
+    filter: blur(4px);
+}
+
+.callback__form-wrapper {
+    z-index: 10;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include tablets {
+      margin-top: 50px;
+    }
+}
+
