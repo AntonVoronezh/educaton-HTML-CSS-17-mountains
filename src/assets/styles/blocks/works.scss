@@ -242,10 +242,11 @@
             flex-direction: column;
             justify-content: center;
             margin-top: 20px;
+             z-index: 10;
         }
         @include phones {
             padding-top: 0;
-            z-index: 10;
+           
         }
         &-left {
             box-sizing: content-box;
