@@ -49,25 +49,28 @@ block content
               h2.title.second-title Чем я могу быть вам полезен
               p.text.about__content Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
               #skills-component
-             
-      .main__bottom.map 
-        address.contact
-          h2.title.second-title Контакты
-          ul.contact__list
-            li.contact__item 
-              +icon('skype', 'contact__img svg', 'ссылка на скайп')
-              a(href="skype:skype_kdn" title="ссылка на скайп" class="contact__link" target="_blank")
-                | skype_kdn
-            li.contact__item 
-              +icon('envelope', 'contact__img svg', 'ссылка на электронную почту')
-              a(href="mailto:astahov@gmail.com" title="ссылка на электронную почту" class="contact__link")
-                | astahov@gmail.com
-            li.contact__item 
-              +icon('phone', 'contact__img svg', 'ссылка на телефон')
-              a(href="tel:+79312009324" title="ссылка на телефон" class="contact__link" target="_blank")
-                | +7 931 200 93 24
-            li.contact__item 
-              +icon('map_marker', 'contact__img svg', 'адрес')
-              | г.Новосибирск, ул. Инская, д. 5
-
+      script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw6BYEWm9ft20VkdRBtctm5pTSccf52Ro")      
+      .main__bottom.map
+        
+          .map__container#map 
+          .map__block
+            address.contact
+              h2.title.second-title Контакты
+              ul.contact__list
+                li.contact__item 
+                  +icon('skype', 'contact__img svg', 'ссылка на скайп')
+                  a(href="skype:skype_kdn" title="ссылка на скайп" class="contact__link" target="_blank")
+                    | skype_kdn
+                li.contact__item 
+                  +icon('envelope', 'contact__img svg', 'ссылка на электронную почту')
+                  a(href="mailto:astahov@gmail.com" title="ссылка на электронную почту" class="contact__link")
+                    | astahov@gmail.com
+                li.contact__item 
+                  +icon('phone', 'contact__img svg', 'ссылка на телефон')
+                  a(href="tel:+79312009324" title="ссылка на телефон" class="contact__link" target="_blank")
+                    | +7 931 200 93 24
+                li.contact__item 
+                  +icon('map_marker', 'contact__img svg', 'адрес')
+                  | г.Новосибирск, ул. Инская, д. 5
+        
             

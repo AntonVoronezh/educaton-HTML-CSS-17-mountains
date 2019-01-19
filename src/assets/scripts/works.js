@@ -1,10 +1,10 @@
+import "./modules/preloader";
 import getMenu from "./modules/menu";
 import "./modules/slider";
 import scrollParallax from "./modules/scrollParallax";
 import scrollBlur from "./modules/scrollBlur";
-import "./modules/preloader";
-import validationFormContact from "./modules/validationFormContact";
 
+import validationFormContact from "./modules/validationFormContact";
 
 getMenu();
 validationFormContact();

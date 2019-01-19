@@ -26,6 +26,7 @@
         progress.innerHTML = percent + '%';
 
     }
+    
 
     window.addEventListener("load", setStyle);
 
